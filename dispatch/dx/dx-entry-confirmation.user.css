@@ -1,0 +1,72 @@
+/* ==UserStyle==
+@name           DX Delivery Entry and Confirmation Page
+@namespace      Venture Banners
+@version        0.0.1
+@description    Improve usability, clarity and style
+@author         Venture Banners
+==/UserStyle== */
+
+@-moz-document url-prefix("https://dm6.dxfreight.co.uk/dm6lite/consignment_entry.aspx") {
+
+
+/* Left-hand side */
+
+td[style="WIDTH: 143px"] {
+    width: 180px !important;
+}
+
+/* Make left-hand labels more obvious */
+#Label19,
+#Label33,
+#Label36
+{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+/* Shared for consignment number, total items, total weight */
+
+#lbl_consno,
+#lbl_totalitems,
+#lbl_totalweight {
+	position: relative;
+    display: inline-block;
+	color: #F68B1F;
+	font-size: 140%;
+	font-weight: bold;
+    border: 1px solid #999;
+    padding: 0.3em 0.5em;
+    user-select: all;
+    border-radius: 0.3em;
+    background-color: #EEE;
+    font-family: monospace;
+}
+
+#lbl_consno::before,
+#lbl_totalitems::before,
+#lbl_totalweight::before {
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	left: -15px;
+	top: 3px;
+}
+
+/* Marker for consignment number */
+
+#lbl_consno::before {
+	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAsSAAALEgHS3X78AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMS8yMS8xNkYETDsAAACZSURBVBiVY5w5cyYDEpg1axYyl4kBL2CBUv9/m/3YqfD7Wnjo3z2P2PvPcP/4y4jQbfZjp/LvS8wMf9iY/3sp/ig0+YpiuMLva8hmusj9hDAYjY2NGRgY9oa+ZWP+D5f+y8CyjK8MoXvPI3Zk3Q9YtSAMZikpKQYGhjMvWEW4/svz/WVgYrnPqnOKw/0fIzPCcDhIS0sjwd8AvYguHrNvlJEAAAAASUVORK5CYII=');
+}
+
+
+
+/* Marker for reference */
+
+/* #lbl_reference::before {
+	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAsSAAALEgHS3X78AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMS8yMS8xNkYETDsAAACVSURBVBiVY5w5cyYDEpg1axYyl4kBL2CB0b//WO/7p3IjNuHPvR2sJ7vY//xgROj+Y73vn/oVBuY/zGwMqn6/zct+ohj+T+UGsplKHr8hDEZjY2MGBobYY5+Z2ZDk/7Kwzc1H6L63gxXFwXc0IAxmKSkpBgaG5yeZOUX+Cyj+Y2JgYbqtxXLUieEfM8JwOEhLSyPB3wCqEytEpRtYagAAAABJRU5ErkJggg==');
+} */
+
+
+}
