@@ -6,7 +6,7 @@
 @author         Venture Banners
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://dm6.dxfreight.co.uk/dm6lite/consignment_entry.aspx") {
+@-moz-document url-prefix("https://dm6.dxfreight.co.uk/dm6lite/consignment_entry.aspx"), url-prefix("https://dxfreight.co.uk/dm6lite/consignment_entry.aspx") {
 
 
 /* Left-hand side */
