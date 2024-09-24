@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DX Consignment Entry and Confirmation Page
 @namespace      Venture Banners
-@version        0.0.4
+@version        0.0.5
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -34,12 +34,24 @@ td:has(> p > .customername) {
 
 /* Hide username */
 p:has(> .customername) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide 'Consignment entry' title */
 tr:has(> td > p > span.screenname) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 	
 	
@@ -66,27 +78,57 @@ td[style*="WIDTH: 1px"] {
 
 /* Hide 'Delivery instructions' title row */
 tr:has(> td > #Label12) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide section headings */
 .sectionheading {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide first four empty/pointless rows */
 & > table:first-child > tbody > tr:is(:nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4)) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide 'Customer no.' and 'Customer search' row */
 tr:has(> td > #lbl_custno) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide 'Country' row */
 tr:has(> td > #Label74) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide rows in the items/weight table */
@@ -94,14 +136,26 @@ table#gv_contents {
 
 	/* Hide heading row */
 	tr:has(th) {
-		display: none;
+		clip: rect(0 0 0 0); 
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap; 
+		width: 1px;
 	}
 
 	/* Hide extra/unused items/weight rows */
 	tr:has(input#gv_contents_txt_items_1),
 	tr:has(input#gv_contents_txt_items_2),
 	tr:has(input#gv_contents_txt_items_3) {
-		display: none;
+		clip: rect(0 0 0 0); 
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap; 
+		width: 1px;
 	}
 	
 	/* Hide package types we don't use */
@@ -114,17 +168,35 @@ table#gv_contents {
 	select[name*="gv_contents"] option[value="8"], /* Docpak */
 	select[name*="gv_contents"] option[value="9"] /* Carton (CA) */
 	{
-		display: none;
+		clip: rect(0 0 0 0); 
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap; 
+		width: 1px;
 	}
 	
 	/* Hide 'Delete' cell */
 	tr td:last-child {
-		display: none;
+		clip: rect(0 0 0 0); 
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap; 
+		width: 1px;
 	}
 	
 	/* Hide last row */
 	tr:last-child {
-		display: none;
+		clip: rect(0 0 0 0); 
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap; 
+		width: 1px;
 	}
 
 }
@@ -139,7 +211,13 @@ table#gv_contents {
 /* 	opacity: 0.3;
 	pointer-events: none;
 	user-select: none; */
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide 'Insurance value required' */
@@ -150,7 +228,13 @@ table#gv_contents {
 /* 	opacity: 0.3;
 	pointer-events: none;
 	user-select: none; */
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 	
@@ -166,7 +250,13 @@ table#ConsignmentDetailsTable + hr + table td #radio_bookin /* Bookin field cell
 /* 	opacity: 0.3;
 	pointer-events: none;
 	user-select: none; */
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Space out buttons to make them less easy to click the wrong one */
@@ -183,7 +273,13 @@ input[type="submit"] {
 
 /* Hide 'Fields with blue highlight are compulsory.' */
 p:has(#Label22) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 }
@@ -201,13 +297,25 @@ td {
 	
 /* Hide step 4 heading */
 .sectionheading {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 	
 
 /* Hide 'Delivery address' heading */
 #Label13 {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 	
 
@@ -250,17 +358,35 @@ td[style="WIDTH: 141px"]	{
 
 /* Hide 'Customer no.' row */
 tr:has(> td > #Label20) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide 'Country' row */
 tr:has(> td > #Label78) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide 'Consignment details' title row */
 tr:has(> td > #Label27) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Mask over '[empty]' second reference no. */
@@ -281,32 +407,68 @@ tr:has(> td > #Label27) {
 
 /* Hide 'Despatch date' row */
 tr:has(> td > #Label28) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide 'Additional insurance' row */
 tr:has(> td > #Label42) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide 'Delivery instructions' title row */
 tr:has(> td > #Label47) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide 'Email address' row */
 tr:has(> td > #Label50) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide 'Bookin' row */
 tr:has(> td > #Label52) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 /* Hide 'Home delivery' row */
 tr:has(> td > p >#lbl_homedelivery) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 
@@ -317,7 +479,13 @@ tr:has(> td > p >#lbl_homedelivery) {
 
 /* Hide the last 4 (empty) rows */
 table.auto-style24 tr:is(:nth-last-child(1), :nth-last-child(2), :nth-last-child(3), :nth-last-child(4)) {
-	display: none;
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
 }
 
 #btn_save {
