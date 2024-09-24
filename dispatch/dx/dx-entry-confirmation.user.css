@@ -1,38 +1,223 @@
 /* ==UserStyle==
-@name           DX Delivery Entry and Confirmation Page
+@name           DX Consignment Entry and Confirmation Page
 @namespace      Venture Banners
-@version        0.0.2
+@version        0.0.3
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://dm6.dxfreight.co.uk/dm6lite/consignment_entry.aspx"), url-prefix("https://dxfreight.co.uk/dm6lite/consignment_entry.aspx") {
+@-moz-document url-prefix("https://dm6.dxfreight.co.uk/dm6lite/consignment_entry.aspx"),
+url-prefix("https://dxfreight.co.uk/dm6lite/consignment_entry.aspx"),
+url-prefix("https://dxfreight.co.uk/dm6lite_beta/consignment_entry.aspx") {
 
 
-/* Left-hand side */
+:root{
+	--orange: #FF8A14;
+}
+	
+/* =========================================================================== */
+/* SHARED */
+/* =========================================================================== */
 
-td[style="WIDTH: 143px"] {
+/* Hide DX banner image */
+body.content {
+	background-image: none;
+}
+
+/* Insert branding */
+td:has(> p > .customername) {
+	height: 75px;
+	background-image: url("https://www.dxdelivery.com/application/themes/the_escape/assets/images/dx-brand-identity.svg");
+	background-size: 100px;
+	background-repeat: no-repeat;
+}
+
+/* Hide username */
+p:has(> .customername) {
+	display: none;
+}
+
+/* Hide 'Consignment entry' title */
+tr:has(> td > p > span.screenname) {
+	display: none;
+}
+	
+	
+/* =========================================================================== */
+/* ENTRY PAGE */
+/* =========================================================================== */
+
+#ConsignmentEntryPanel {
+
+/* Make first column wider, and matching across tables */
+td[style*="WIDTH: 107px"],
+td[style*="WIDTH: 150px"],
+td[style*="WIDTH: 141px"],
+td[style*="WIDTH: 6px"]
+{
+    width: 140px !important;
+}
+
+/* Make empty/spacer cells non-selectable */
+td[style*="WIDTH: 1px"] {
+	pointer-events: none;
+}
+
+
+/* Hide 'Delivery instructions' title row */
+tr:has(> td > #Label12) {
+	display: none;
+}
+
+/* Hide section headings */
+.sectionheading {
+	display: none;
+}
+
+/* Hide first four empty/pointless rows */
+& > table:first-child > tbody > tr:is(:nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4)) {
+	display: none;
+}
+
+/* Hide 'Customer no.' and 'Customer search' row */
+tr:has(> td > #lbl_custno) {
+	display: none;
+}
+
+/* Hide 'Country' row */
+tr:has(> td > #Label74) {
+	display: none;
+}
+
+/* Hide rows in the items/weight table */
+table#gv_contents {
+
+	/* Hide heading row */
+	tr:has(th) {
+		display: none;
+	}
+
+	/* Hide extra/unused items/weight rows */
+	tr:has(input#gv_contents_txt_items_1),
+	tr:has(input#gv_contents_txt_items_2),
+	tr:has(input#gv_contents_txt_items_3) {
+		display: none;
+	}
+	
+	tr:last-child {
+		display: none;
+	}
+
+}
+
+
+/* Step 2 - Consignment details*/
+
+/* Hide 'Extra insurance required' */
+#ConsignmentDetailsTable tr td:has(#lbl_insurance), /* 'Extra insurance required' title cell */
+#ConsignmentDetailsTable tr td:has(input[name="radio_insurance"]) /* 'Extra insurance required' input (radios) cell */
+{
+/* 	opacity: 0.3;
+	pointer-events: none;
+	user-select: none; */
+	display: none;
+}
+
+/* Hide 'Insurance value required' */
+#ConsignmentDetailsTable tr td:has(#lbl_insurancevalue), /* 'Insurance value' title cell */
+#ConsignmentDetailsTable tr td:has(#lbl_insurancevalue) + td:has(#Label1), /* 'Insurance value' pound symbol */
+#ConsignmentDetailsTable tr td:has(input[name="txt_insurancevalue"]) /* 'Insurance value' input cell */
+{
+/* 	opacity: 0.3;
+	pointer-events: none;
+	user-select: none; */
+	display: none;
+}
+
+	
+/* Disable and de-opacity unused inputs */
+/* Step 3 - Delivery instructions */
+table#ConsignmentDetailsTable + hr + table td #Label9, /* Email address title cell */
+table#ConsignmentDetailsTable + hr + table td #txt_emailaddress, /* Email address field cell */
+table#ConsignmentDetailsTable + hr + table td #Label16, /* Home delivery title cell */
+table#ConsignmentDetailsTable + hr + table td #radio_homedelivery, /* Home delivery field cell */
+table#ConsignmentDetailsTable + hr + table td #Label17, /* Bookin title cell */
+table#ConsignmentDetailsTable + hr + table td #radio_bookin /* Bookin field cell */
+{
+/* 	opacity: 0.3;
+	pointer-events: none;
+	user-select: none; */
+	display: none;
+}
+
+/* Space out buttons to make them less easy to click the wrong one */
+p:has(#Button1) {
+	display: flex;
+	justify-content: space-between;
+}
+
+.button,
+input[type="submit"] {
+	cursor: pointer;
+}
+
+
+/* Hide 'Fields with blue highlight are compulsory.' */
+p:has(#Label22) {
+	display: none;
+}
+
+}
+
+/* =========================================================================== */
+/* CONFIRMATION PAGE */
+/* =========================================================================== */
+
+#ConfirmationPanel {
+	margin-top: 50px;
+	
+td {
+	padding: 0.3em 0.5em;
+}
+	
+/* Hide step 4 heading */
+.sectionheading {
+	display: none;
+}
+	
+
+/* Hide 'Delivery address' heading */
+#Label13 {
+	display: none;
+}
+	
+
+	
+/* Make first column wider, and matching across tables */
+td[style="WIDTH: 143px"],
+td[style="WIDTH: 150px"],
+td[style="WIDTH: 141px"]	{
     width: 180px !important;
 }
 
-/* Make left-hand labels more obvious */
-#Label19,
-#Label33,
-#Label36
+/* Make titles more obvious */
+#Label19 /* Consignment number */,
+#Label33, /* Total number of items */
+#Label36 /* Total weight */
 {
     font-weight: bold;
     font-size: 15px;
 }
 
 
+/* Make values easily-clickable for copy/pasting */  
 /* Shared for consignment number, total items, total weight */
-
 #lbl_consno,
 #lbl_totalitems,
 #lbl_totalweight {
 	position: relative;
     display: inline-block;
-	color: #F68B1F;
+	color: var(--orange);
 	font-size: 140%;
 	font-weight: bold;
     border: 1px solid #999;
@@ -43,7 +228,102 @@ td[style="WIDTH: 143px"] {
     font-family: monospace;
 }
 
-#lbl_consno::before,
+
+/* Hide 'Customer no.' row */
+tr:has(> td > #Label20) {
+	display: none;
+}
+
+/* Hide 'Country' row */
+tr:has(> td > #Label78) {
+	display: none;
+}
+
+/* Hide 'Consignment details' title row */
+tr:has(> td > #Label27) {
+	display: none;
+}
+
+/* Mask over '[empty]' second reference no. */
+#lbl_reference {
+	position: relative;
+}
+
+#lbl_reference::after {
+	display: block;
+	content: "";
+	background-color: #fff;
+	position: absolute;
+	width: 3.85em;
+	height: 1.5em;
+	right: 0;
+	top: 0;
+}
+
+/* Hide 'Despatch date' row */
+tr:has(> td > #Label28) {
+	display: none;
+}
+
+/* Hide 'Additional insurance' row */
+tr:has(> td > #Label42) {
+	display: none;
+}
+
+/* Hide 'Delivery instructions' title row */
+tr:has(> td > #Label47) {
+	display: none;
+}
+
+/* Hide 'Email address' row */
+tr:has(> td > #Label50) {
+	display: none;
+}
+
+/* Hide 'Bookin' row */
+tr:has(> td > #Label52) {
+	display: none;
+}
+
+/* Hide 'Home delivery' row */
+tr:has(> td > p >#lbl_homedelivery) {
+	display: none;
+}
+
+
+/* #Label33 {
+	text-indent: -9999px;
+}
+ */
+
+/* Hide the last 4 (empty) rows */
+table.auto-style24 tr:is(:nth-last-child(1), :nth-last-child(2), :nth-last-child(3), :nth-last-child(4)) {
+	display: none;
+}
+
+#btn_save {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Markers */
+/* #lbl_consno::before,
 #lbl_totalitems::before,
 #lbl_totalweight::before {
 	display: block;
@@ -52,13 +332,13 @@ td[style="WIDTH: 143px"] {
 	height: 10px;
 	left: -15px;
 	top: 3px;
-}
+} */
 
 /* Marker for consignment number */
 
-#lbl_consno::before {
+/* #lbl_consno::before {
 	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAsSAAALEgHS3X78AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMS8yMS8xNkYETDsAAACZSURBVBiVY5w5cyYDEpg1axYyl4kBL2CBUv9/m/3YqfD7Wnjo3z2P2PvPcP/4y4jQbfZjp/LvS8wMf9iY/3sp/ig0+YpiuMLva8hmusj9hDAYjY2NGRgY9oa+ZWP+D5f+y8CyjK8MoXvPI3Zk3Q9YtSAMZikpKQYGhjMvWEW4/svz/WVgYrnPqnOKw/0fIzPCcDhIS0sjwd8AvYguHrNvlJEAAAAASUVORK5CYII=');
-}
+} */
 
 
 
@@ -69,4 +349,5 @@ td[style="WIDTH: 143px"] {
 } */
 
 
+}
 }
