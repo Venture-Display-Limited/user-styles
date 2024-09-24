@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DX Consignment Entry and Confirmation Page
 @namespace      Venture Banners
-@version        0.0.3
+@version        0.0.4
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -104,6 +104,25 @@ table#gv_contents {
 		display: none;
 	}
 	
+	/* Hide package types we don't use */
+	select[name*="gv_contents"] option[value="0"], /* Select */
+	select[name*="gv_contents"] option[value="2"], /* Kilos */
+	select[name*="gv_contents"] option[value="3"], /* Length */
+	select[name*="gv_contents"] option[value="4"], /* Length > 3m */
+	select[name*="gv_contents"] option[value="5"], /* IDW */
+	select[name*="gv_contents"] option[value="7"], /* Nightpak */
+	select[name*="gv_contents"] option[value="8"], /* Docpak */
+	select[name*="gv_contents"] option[value="9"] /* Carton (CA) */
+	{
+		display: none;
+	}
+	
+	/* Hide 'Delete' cell */
+	tr td:last-child {
+		display: none;
+	}
+	
+	/* Hide last row */
 	tr:last-child {
 		display: none;
 	}
