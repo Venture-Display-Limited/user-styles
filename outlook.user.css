@@ -1,0 +1,59 @@
+/* ==UserStyle==
+@name           Outlook
+@namespace      Venture Banners
+@version        0.0.1
+@description    Improve usability, clarity and style
+@author         Venture Banners
+==/UserStyle== */
+
+@-moz-document url-prefix("https://outlook.office.com/") {
+
+/* Hide unwanted email actions that can't be disabled in the interface */
+
+/* Hide react button */
+.wide-content-host div[role="group"] > div:has([aria-label*="React"]){
+	display: none;
+}
+
+/* Hide react button */
+.wide-content-host div[role="group"] > div:has([aria-label*="App"]){
+	display: none;
+}
+
+/* Hide react button */
+.wide-content-host div[role="group"] > div:has([aria-label*="Viva"]){
+	display: none;
+}
+
+/* Hide unwanted icons/services in the left bar */
+
+#LeftRail div[role="navigation"] > div:has([aria-label="Viva Engage"]) {
+	display: none;
+}
+
+#LeftRail div[role="navigation"] > div:has([aria-label="Bookings"]) {
+	display: none;
+}
+
+#LeftRail div[role="navigation"] > div:has([aria-label="Groups"]) {
+	display: none;
+}
+
+#LeftRail div[role="navigation"] > div:has([aria-label="Admin"]) {
+	display: none;
+}
+
+#LeftRail div[role="navigation"] > div:has([aria-label="OneDrive"]) {
+	display: none;
+}
+
+#LeftRail div[role="navigation"] > div:has([aria-label="To Do"]) {
+	display: none;
+}
+
+#LeftRail div[role="navigation"] + div > div:has([aria-label="More apps"]),
+#LeftRail div[role="navigation"] + div > div:has([aria-label=""]) {
+	display: none;
+}
+
+}
