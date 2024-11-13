@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Outlook
 @namespace      Venture Banners
-@version        0.0.3
+@version        0.0.4
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -64,6 +64,14 @@ div[aria-label="Message actions"] > div:has(span[class*="divider"]){
 
 #LeftRail div[role="navigation"] + div > div:has([aria-label="More apps"]),
 #LeftRail div[role="navigation"] + div > div:has([aria-label=""]) {
+	display: none;
+}
+
+
+/* Hide unwanted shortcuts in top-right */
+#headerButtonsRegionId #owaChatButton_container,
+#headerButtonsRegionId #owaNoteFeedButton_container,
+#headerButtonsRegionId #owaTipsBtn_container {
 	display: none;
 }
 
