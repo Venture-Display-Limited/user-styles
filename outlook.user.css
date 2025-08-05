@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Outlook
 @namespace      Venture Banners
-@version        0.0.5
+@version        0.0.6
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -26,9 +26,9 @@ div[aria-label="Message actions"] > div:has([aria-label*="Viva"]){
 }
 
 /* Hide View in Light/Dark mode button */
-div[aria-label="Message actions"] > div:has([aria-label*="View with a"]){
+/*div[aria-label="Message actions"] > div:has([aria-label*="View with a"]){
 	display: none;
-}
+}*/
 
 /* Hide divider */
 div[aria-label="Message actions"] > div:has(span[class*="divider"]){
