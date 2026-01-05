@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Outlook
 @namespace      Venture Banners
-@version        0.0.9
+@version        0.0.10
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -113,9 +113,16 @@ div[aria-label="Message actions"] > div:has([aria-label*="More actions"]){
 	display: none;
 }
 
-}
-
 /* Hide Copilot toggle button */
 #BottomBar > div:last-child {
 	display: none;
 }
+
+
+/* Hide 'Go to Groups' button (underneath folder list) */
+#folderPanePinFavoritesFolderContainer > div > div:has(div[data-folder-name="go to groups"]) {
+	display: none;
+}
+}
+
+
