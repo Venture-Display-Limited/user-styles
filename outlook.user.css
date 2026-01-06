@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Outlook
 @namespace      Venture Banners
-@version        0.0.12
+@version        0.0.13
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -110,11 +110,6 @@ div[aria-label="Message actions"] > div:has([aria-label*="More actions"]){
 #headerButtonsRegionId #owaTimePanelBtn_container,
 #headerButtonsRegionId #owaActivityFeedButton_container
 {
-	display: none;
-}
-
-/* Hide Copilot toggle button */
-#BottomBar > div:last-child {
 	display: none;
 }
 
