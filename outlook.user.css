@@ -123,6 +123,17 @@ div[aria-label="Message actions"] > div:has([aria-label*="More actions"]){
 	display: none;
 }
 
+/* Make emojis bigger in emoji picker panel */
+div[role="listbox"][aria-label^="Entering Grid use arrow keys"] {
+	grid-template-columns: repeat(5, 1fr);
+
+	& > button {
+		width: auto;
+		font-size: 30px;
+		margin-bottom: 0.5em;
+	}
+}
+
 
 
 }
