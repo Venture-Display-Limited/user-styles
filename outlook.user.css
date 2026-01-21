@@ -134,6 +134,10 @@ div[role="listbox"][aria-label^="Entering Grid use arrow keys"] {
 	}
 }
 
+/* Hide Copilot button (which shows even when the feature is turned off) */
+#BottomBar > div:last-child {
+	display: none;
+}
 
 
 }
