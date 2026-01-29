@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Microsoft Security
 @namespace      Venture Banners
-@version        0.0.8
+@version        0.0.9
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -77,6 +77,14 @@ main#viewport > div:has(ol.ms-Breadcrumb-list) {
 }
 
 /* Apply fonts - native interface is slow to do this */
+
+@font-face {
+	font-family: 'SegoeUI-Semibold-final';
+	font-style: normal;
+	font-weight: 400;
+	src: url("https://res.cdn.office.net/admincenter/admin-content/en/css/webfonts/segoeui-semibold-final.woff") format("woff");
+}
+
 .displayName-145 {
 	font-family: SegoeUI-Semibold-final !important;
 	font-size: 14px !important;
