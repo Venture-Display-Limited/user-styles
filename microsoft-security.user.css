@@ -1,10 +1,13 @@
 /* ==UserStyle==
 @name           Microsoft Security
 @namespace      Venture Banners
-@version        0.0.2
+@version        0.0.3
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
+
+
+/* QUARANTINE */
 
 @-moz-document url-prefix("https://security.microsoft.com/quarantine") {
 
@@ -18,6 +21,21 @@
 /* Highlight ' Released' emails */
 .ms-List-cell:has(div[data-automation-key="ReleasedBy"] > span:not(:empty)) > div > div {
 	background-color: #0080003b;
+}
+
+}
+
+
+
+/* TRANSPORT RULES */
+
+@-moz-document url-prefix("https://admin.cloud.microsoft/exchange?#/transportrules/") {
+
+/* Make rule name column wider */
+div[data-item-key="Rule"],
+div[data-automation-key="Rule"] {
+	width: 500px !important;
+	outline: 1px solid red;
 }
 
 }
