@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Microsoft Security
 @namespace      Venture Banners
-@version        0.0.4
+@version        0.0.5
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -35,6 +35,30 @@
 div[data-item-key="Rule"],
 div[data-automation-key="Rule"] {
 	width: 500px !important;
+}
+
+/* Colour icon if 'Stop Processing Rules' is enabled */
+div[data-automation-key="StopProcessingRules"] i[data-icon-name="CheckMark"] {
+	color: red;
+}
+
+/* Hide icon if 'Stop Processing Rules' is disabled */
+div[data-automation-key="StopProcessingRules"] i[data-icon-name="Cancel"] {
+	display: none;
+}
+
+/* Hide 'Configuration supported' column */
+div[role="columnheader"][data-item-key="ConfigurationSupported"],
+div[role="gridcell"][data-automation-key="ConfigurationSupported"] {
+	width: 0 !important;
+	display: none;
+}
+
+/* Hide 'Unsupported reason' column, which is being 'grown' by JS every second */
+div[role="columnheader"][data-item-key="IsRuleConfigurationSupported"],
+div[role="gridcell"][data-automation-key="IsRuleConfigurationSupported"] {
+	width: 0 !important;
+	display: none;
 }
 
 }
