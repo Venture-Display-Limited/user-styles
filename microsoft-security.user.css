@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Microsoft Security
 @namespace      Venture Banners
-@version        0.0.6
+@version        0.0.7
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -58,6 +58,21 @@ div[role="gridcell"][data-automation-key="ConfigurationSupported"] {
 div[role="columnheader"][data-item-key="IsRuleConfigurationSupported"],
 div[role="gridcell"][data-automation-key="IsRuleConfigurationSupported"] {
 	width: 0 !important;
+	display: none;
+}
+
+/* Hide message about DLP policies */
+main#viewport > div:has(i[data-icon-name="Info"]) {
+	display: none;
+}
+
+/* Hide page title and description of page paragraph */
+main#viewport > div:has(h1) {
+	display: none;
+}
+
+/* Hide page breadcrumbs nav */
+main#viewport > div:has(ol.ms-Breadcrumb-list) {
 	display: none;
 }
 
