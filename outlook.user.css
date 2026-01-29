@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Outlook
 @namespace      Venture Banners
-@version        0.0.15
+@version        0.0.16
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -137,6 +137,16 @@ div[role="listbox"][aria-label^="Entering Grid use arrow keys"] {
 /* Hide Copilot button (which shows even when the feature is turned off) */
 #BottomBar > div:nth-child(2) {
 	display: none;
+}
+
+/* Apply fonts - native interface is slow to do this */
+.displayName-145 {
+	font-family: SegoeUI-Semibold-final !important;
+	font-size: 14px !important;
+}
+
+.root-440 {
+	font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
 }
 
 
