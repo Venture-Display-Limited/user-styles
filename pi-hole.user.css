@@ -1,0 +1,24 @@
+/* ==UserStyle==
+@name           Pi-hole Web Admin
+@namespace      Venture Banners
+@version        0.0.1
+@description    Improve usability, clarity and style
+@author         Venture Banners
+==/UserStyle== */
+
+@document url-prefix(https://pihole),
+url-prefix(https://pi-hole) {
+
+     /* Hide donate section in sidebar */
+    .sidebar-menu > .header:has(+.menu-donate),
+    .sidebar-menu .menu-donate
+    {
+        display: none;
+    }
+    
+    /* Hide donate paragraph in footer */
+    footer.main-footer > div:has(a[href*="donate"])
+    {
+        display: none;
+    }
+}
