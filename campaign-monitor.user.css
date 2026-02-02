@@ -1,0 +1,16 @@
+/* ==UserStyle==
+@name           Campaign Monitor
+@namespace      Venture Banners
+@version        0.0.1
+@description    Improve usability, clarity and style
+@author         Venture Banners
+==/UserStyle== */
+
+@-moz-document url-prefix("https://campaignmonitor.venturebanners.co.uk/campaigns/design/") {
+
+/* Make left sidebar wider */
+#emb-body .l-sidebar {
+    max-width: 700px !important;
+}
+
+}
