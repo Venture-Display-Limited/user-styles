@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           UniFi Drive
 @namespace      Venture Banners
-@version        0.0.6
+@version        0.0.7
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -15,6 +15,8 @@ div[class^="TableCell__Cell"][style="width: 25%;"]:first-child {
 }
 
 /* Make preview thumbnail in right panel larger/uncropped */
-div[class^="SidePanel"] div[class^="FilePanel__Wrapper"] > div[class^="Thumbnail__Wrapper"]
+div[class^="SidePanel"] div[class^="FilePanel__Wrapper"] > div[class^="Thumbnail__Wrapper"] {
     height: auto !important;
+}
+
 }
