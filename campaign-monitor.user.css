@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Campaign Monitor
 @namespace      Venture Banners
-@version        0.0.3
+@version        0.0.4
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -19,6 +19,11 @@
 
 #emb-body .l-offset--stage {
     padding-left: var(--siderbar-width) !important;
+}
+
+/* Make 'Review Links' links actually redable and not truncated */
+.c-link-review__item-url {
+    max-width: none !important;
 }
 
 }
