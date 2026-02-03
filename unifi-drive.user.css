@@ -1,0 +1,17 @@
+/* ==UserStyle==
+@name           UniFi Drive
+@namespace      Venture Banners
+@version        0.0.1
+@description    Improve usability, clarity and style
+@author         Venture Banners
+==/UserStyle== */
+
+@-moz-document url-prefix("https://nas1.business.venturebanners.network/"),
+url-prefix("https://nas2.business.venturebanners.network/") {
+
+/* Make filename column wider in search results */
+div[class^="TableCell__Cell"][style="width: 25%"] {
+    width: 45% !important;
+}
+
+}
