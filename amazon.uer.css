@@ -1,0 +1,17 @@
+/* ==UserStyle==
+@name           [Venture] Amazon
+@namespace      Venture Banners
+@version        0.0.1
+@description    Improve usability, clarity and style
+@author         Venture Banners
+==/UserStyle== */
+
+@-moz-document domain("amazon.co.uk"), domain("www.amazon.co.uk") {
+
+/* Hide sponsored items */
+	[data-component-type="s-search-result"]:has(span.puis-sponsored-label-info-icon) {
+        /* display: none; */
+		opacity: 0.3;
+	}
+
+}
