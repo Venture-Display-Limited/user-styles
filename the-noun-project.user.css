@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name           [Venture] The Noun Project
+@namespace      Venture Banners
+@version        0.0.1
+@description    Improve usability, clarity and style
+@author         Venture Banners
+==/UserStyle== */
+
+@-moz-document domain("thenounproject.com") {
+
+/* Hide paid download options */
+label[for="radio-proyearly"],
+label[for="radio-payment"] {
+	display: none;
+}
+
+/* Hide PNG download button */
+[class^="styles__DownloadButtonsContainer"] button:last-child {
+	display: none;
+}
+
+}
