@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Outlook
 @namespace      Venture Banners
-@version        0.0.16
+@version        0.0.17
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -29,6 +29,14 @@ div[aria-label="Message actions"] > div:has([aria-label*="Viva"]){
 /*div[aria-label="Message actions"] > div:has([aria-label*="View with a"]){
 	display: none;
 }*/
+
+
+/* Hide action bar items */
+/* Viva Insights */
+div[data-automation-type="RibbonBottomBarContainer"] > div:has(i[data-icon-name="AddIn_Viva_Insights"]) {
+	display: none;
+}
+
 
 /* Hide divider */
 div[aria-label="Message actions"] > div:has(span[class*="divider"]){
