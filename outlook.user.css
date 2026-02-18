@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Outlook
 @namespace      Venture Banners
-@version        0.0.18
+@version        0.0.19
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -153,3 +153,4 @@ div[role="menuitem"][aria-label="Reply"] span span:last-child::after {
 }
 
 
+} /* End */
