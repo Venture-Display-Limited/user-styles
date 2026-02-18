@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Outlook
 @namespace      Venture Banners
-@version        0.0.19
+@version        0.0.20
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -150,6 +150,11 @@ div[role="listbox"][aria-label^="Entering Grid use arrow keys"] {
 /* Append 'just to sender' to Reply buttons */
 div[role="menuitem"][aria-label="Reply"] span span:last-child::after {
 	content: " (Just to Sender)";
+}
+
+/* Append 'to everyone' to Reply all buttons */
+div[role="menuitem"][aria-label="Reply all"] span span:last-child::after {
+	content: " (to Everyone)";
 }
 
 
