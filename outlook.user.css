@@ -147,9 +147,9 @@ div[role="listbox"][aria-label^="Entering Grid use arrow keys"] {
 	display: none;
 }
 
-
-
-
+/* Append 'just to sender' to Reply buttons */
+div[role="menuitem"][aria-label="Reply"] span span:last-child::after {
+	content: " (Just to Sender)";
 }
 
 
