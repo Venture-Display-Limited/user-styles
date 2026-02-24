@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Pi-hole Web Admin
 @namespace      Venture Banners
-@version        0.0.2
+@version        0.0.3
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -21,4 +21,11 @@ url-prefix(https://pi-hole) {
     {
         display: none;
     }
+
+    /* Stop icons scaling on hover in dashboard*/
+	.small-box:hover .icon {
+		font-size: 76px !important;
+		transform: scale(1)  !important;
+	}
+    
 }
