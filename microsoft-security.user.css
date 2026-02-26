@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Microsoft Security
 @namespace      Venture Banners
-@version        0.0.14
+@version        0.0.15
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -40,12 +40,12 @@ div:has(+ #pageContentZone):has(button#ResolutionToCommonIssuesButton) {
 
 
 /* Highlight 'Released' emails - only works after a table reload/page refresh as this cell value isn't inserted immediately */
-.ms-List-cell:has(div[data-automation-key="ReleasedBy"] > span:not(:empty)) > div > div {
+div[role="presentation"][class="ms-List-cell"][data-automationid="ListCell"]:has(div[data-automation-key="ReleasedBy"] > span:not(:empty)) > div > div {
 	background-color: #0080003b;
 }
 
 /* Highlight 'Released' emails - using Tampermonkey script */
-.ms-List-cell:has(div[data-released="true"]) {
+div[role="presentation"][class="ms-List-cell"][data-automationid="ListCell"]:has(div[data-released="true"]) {
 	background-color: #0080003b;
 }
 
