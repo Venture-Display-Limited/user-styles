@@ -1,0 +1,31 @@
+/* ==UserStyle==
+@name           [Venture] JetKVM
+@namespace      Venture Banners
+@version        0.0.1
+@description    Improve usability, clarity and style
+@author         Venture Banners
+==/UserStyle== */
+
+@moz-document domain("kvm-caldera-a.venturebanners.network") {
+
+/* Hide very top bar */
+div#root > div:first-child > div:nth-child(2) > div:first-child {
+	display: none;
+}
+
+/* Hide action/button bar */
+div#root > div:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:first-child {
+	display: none;
+}
+
+/* Hide 'active keys' bar at bottom */
+div#root > div:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:last-child {
+	display: none;
+}
+
+/* Remove margin from main container */
+div:has(div > video) {
+	margin: 0 !important;
+}
+
+}
