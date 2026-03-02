@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Microsoft Security
 @namespace      Venture Banners
-@version        0.0.15
+@version        0.0.16
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -45,7 +45,7 @@ div[role="presentation"][class="ms-List-cell"][data-automationid="ListCell"]:has
 }
 
 /* Highlight 'Released' emails - using Tampermonkey script */
-div[role="presentation"][class="ms-List-cell"][data-automationid="ListCell"]:has(div[data-released="true"]) {
+div[role="presentation"][class="ms-List-cell"][data-automationid="ListCell"][data-released="true"] > div > div {
 	background-color: #0080003b;
 }
 
