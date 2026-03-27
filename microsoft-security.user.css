@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Microsoft Security
 @namespace      Venture Banners
-@version        0.0.25
+@version        0.0.26
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -58,6 +58,15 @@ div:has(+ #pageContentZone):has(button#ResolutionToCommonIssuesButton) {
 }
 div[role="presentation"][class="ms-List-cell"][data-automationid="ListCell"][data-released="true"] {
 	order: 999;
+}
+
+/* Break (display: contents) on div[role="presentation"].ms-List-page as these get put in as a container around each 10 messages*/
+div[role="presentation"].ms-List-surface {
+	display: grid;
+	
+	& > div[role="presentation"].ms-List-page {
+		display: contents;
+	}
 }
 
 }
