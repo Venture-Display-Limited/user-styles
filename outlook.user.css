@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name           [Venture] Outlook
 @namespace      Venture Banners
-@version        0.0.22
+@version        0.0.23
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://outlook.office.com/") {
+@-moz-document url-prefix("https://outlook.cloud.microsoft/") {
 
 /* Hide unwanted email actions that can't be disabled in the interface */
 
