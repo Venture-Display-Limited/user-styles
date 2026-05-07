@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Microsoft Security
 @namespace      Venture Banners
-@version        0.0.30
+@version        0.0.31
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -72,6 +72,11 @@ div[role="presentation"].ms-List-surface {
 /* Hide unneeded buttons */
 .ms-CommandBar-primaryCommand > .ms-OverflowSet-item:has([class*="rootDisabled"]),
 .ms-CommandBar-primaryCommand > .ms-OverflowSet-item:has([id*="MoreActionsControlId"]) {
+	display: none;
+}
+
+/* Hide persistent/buggy loading bar */
+.ms-ProgressIndicator {
 	display: none;
 }
 
