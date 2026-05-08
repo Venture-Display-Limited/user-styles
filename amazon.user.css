@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Amazon
 @namespace      Venture Banners
-@version        0.0.1
+@version        0.0.2
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -9,9 +9,14 @@
 @-moz-document domain("amazon.co.uk"), domain("www.amazon.co.uk") {
 
 /* Hide sponsored items */
-	[data-component-type="s-search-result"]:has(span.puis-sponsored-label-info-icon) {
-        /* display: none; */
-		opacity: 0.3;
-	}
+[data-component-type="s-search-result"]:has(span.puis-sponsored-label-info-icon) {
+    /* display: none; */
+	opacity: 0.3;
+}
+
+/* Hide Bulk savings to consider and Deals trending on Amazon Business */
+#rhf-shoveler {
+	display: none;
+}
 
 }
