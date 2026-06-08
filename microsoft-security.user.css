@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Microsoft Security
 @namespace      Venture Banners
-@version        0.0.31
+@version        0.0.32
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -17,19 +17,29 @@
 }
 
 /* Hide top bar / search bar */
-#fullPanelPageZone > div:has(div#O365_NavHeader) {
+div:has( > div > div#scc-app-header) {
+	display: none !important;
+}
+
+/* Hide left 'favourites' bar */
+#scc-app nav[aria-label="Favorites"] {
 	display: none !important;
 }
 
 /* Hide header bars */
 div#pageContentZone > div:nth-child(1),
 div#pageContentZone > div:nth-child(2) {
-	display: none;
+	display: none !important;
 }
 
 /* Hide breadcrumbs and unused links bar */
 div:has(+ #pageContentZone):has(button#ResolutionToCommonIssuesButton) {
-	display: none;
+	display: none !important;
+}
+
+/* Hide Unused shortcuts in topr right */
+.scc-commandBar {
+	display: none !important;
 }
 
 /* Allow quarantined email details to be selected */
