@@ -38,9 +38,9 @@ div:has(+ #pageContentZone):has(button#ResolutionToCommonIssuesButton) {
 }
 
 /* Hide Unused shortcuts in topr right */
-/*.scc-commandBar {
+.scc-commandBar:has(#ResolutionToCommonIssuesButton) {
 	display: none !important;
-}*/
+}
 
 /* Allow quarantined email details to be selected */
 *,
@@ -62,24 +62,26 @@ div:has(+ #pageContentZone):has(button#ResolutionToCommonIssuesButton) {
 	background-color: rgb(23 255 125 / 25%);
 }
 
+
+
 /* Put released emails at the end */
+/* 
+NO LONGER USED/NEEDED - BREAKS LAYOUT AND LIMITS TO 10 EMAILS
+Break (display: contents) on div[role="presentation"].ms-List-page as these get put in as a container around each 10 messages */
+/*
 .ms-List-surface {
 	display: grid;
 }
 div[class="ms-List-cell"][data-automationid="ListCell"][data-released="true"] {
 	order: 999;
 }
-
-/* 
-NO LONGER USED/NEEDED - BREAKS LAYOUT AND LIMITS TO 10 EMAILS
-Break (display: contents) on div[role="presentation"].ms-List-page as these get put in as a container around each 10 messages */
 div[role="presentation"].ms-List-surface {
 	display: grid;
 	
 	& > div[role="presentation"].ms-List-page {
 		display: contents;
 	}
-}
+}*/
 
 /* Hide unneeded buttons */
 .ms-CommandBar-primaryCommand > .ms-OverflowSet-item:has([class*="rootDisabled"]),
