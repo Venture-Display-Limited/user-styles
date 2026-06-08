@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Microsoft Security
 @namespace      Venture Banners
-@version        0.0.33
+@version        0.0.34
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -38,9 +38,9 @@ div:has(+ #pageContentZone):has(button#ResolutionToCommonIssuesButton) {
 }
 
 /* Hide Unused shortcuts in topr right */
-.scc-commandBar {
+/*.scc-commandBar {
 	display: none !important;
-}
+}*/
 
 /* Allow quarantined email details to be selected */
 *,
@@ -63,23 +63,23 @@ div:has(+ #pageContentZone):has(button#ResolutionToCommonIssuesButton) {
 }
 
 /* Put released emails at the end */
-.ms-List-page[role="presentation"] {
+.ms-List-surface {
 	display: grid;
 }
-div[role="presentation"][class="ms-List-cell"][data-automationid="ListCell"][data-released="true"] {
+div[class="ms-List-cell"][data-automationid="ListCell"][data-released="true"] {
 	order: 999;
 }
 
 /* 
-NO LONGER USED/NEEDE - BREAKS LAYOUT AND LIMITS TO 10 EMAILS
+NO LONGER USED/NEEDED - BREAKS LAYOUT AND LIMITS TO 10 EMAILS
 Break (display: contents) on div[role="presentation"].ms-List-page as these get put in as a container around each 10 messages */
-/* div[role="presentation"].ms-List-surface {
+div[role="presentation"].ms-List-surface {
 	display: grid;
 	
 	& > div[role="presentation"].ms-List-page {
 		display: contents;
 	}
-}*/
+}
 
 /* Hide unneeded buttons */
 .ms-CommandBar-primaryCommand > .ms-OverflowSet-item:has([class*="rootDisabled"]),
