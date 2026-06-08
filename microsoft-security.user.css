@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Microsoft Security
 @namespace      Venture Banners
-@version        0.0.32
+@version        0.0.33
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -70,14 +70,16 @@ div[role="presentation"][class="ms-List-cell"][data-automationid="ListCell"][dat
 	order: 999;
 }
 
-/* Break (display: contents) on div[role="presentation"].ms-List-page as these get put in as a container around each 10 messages*/
-div[role="presentation"].ms-List-surface {
+/* 
+NO LONGER USED/NEEDE - BREAKS LAYOUT AND LIMITS TO 10 EMAILS
+Break (display: contents) on div[role="presentation"].ms-List-page as these get put in as a container around each 10 messages */
+/* div[role="presentation"].ms-List-surface {
 	display: grid;
 	
 	& > div[role="presentation"].ms-List-page {
 		display: contents;
 	}
-}
+}*/
 
 /* Hide unneeded buttons */
 .ms-CommandBar-primaryCommand > .ms-OverflowSet-item:has([class*="rootDisabled"]),
