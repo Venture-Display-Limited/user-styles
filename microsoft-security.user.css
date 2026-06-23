@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Microsoft Security
 @namespace      Venture Banners
-@version        0.0.35
+@version        0.0.36
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -148,7 +148,7 @@ main#viewport > div:has(ol.ms-Breadcrumb-list) {
 }
 
 /* Highlight recent 'Block/Reject Domain' rule */
-div[data-test-id^="a6935de2-16f5-484d-9d3e-091334b0ff60"] {
+div[data-test-id^="6c9d1e14-9fb6-4aff-8e84-d8cc0a1456b3"] {
 	outline: 1px solid red;
 	position: relative;
 	z-index: 1;
