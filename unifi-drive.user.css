@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] UniFi Drive
 @namespace      Venture Banners
-@version        0.0.9
+@version        0.0.10
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -20,7 +20,7 @@ div[class^="SidePanel"] div[class^="FilePanel__Wrapper"] > div[class^="Thumbnail
 }
 
 /* Reorder Snaphot schedule days of week, so Sunday is last */
-div > [data-testid="snapshot-weekly-option-0"] {
+div[class*="WeeklyOptions"] > div:has( > [data-testid="snapshot-weekly-option-0"]) {
     order: 999;
 }
 
