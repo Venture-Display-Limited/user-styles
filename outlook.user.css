@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Outlook
 @namespace      Venture Banners
-@version        0.0.24
+@version        0.0.25
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -60,52 +60,51 @@ div[aria-label="Message actions"] > div:has([aria-label*="More actions"]){
 
 /* Hide unwanted icons/services in the left bar */
 
-#LeftRail div[role="navigation"] > div:has([aria-label="Viva Engage"]) {
+#LeftRail div:has( > div[aria-label="Viva Engage"]) {
 	display: none;
 }
 
-#LeftRail div[role="navigation"] > div:has([aria-label="Calendar"]) {
+#LeftRail div:has( > div[aria-label="Calendar"]) {
 	display: none;
 }
 
-#LeftRail div[role="navigation"] > div:has([aria-label="Newsletters"]) {
+#LeftRail div:has( > div[aria-label="Newsletters"]) {
 	display: none;
 }
 
-#LeftRail div[role="navigation"] > div:has([aria-label="Bookings"]) {
+#LeftRail div:has( > div[aria-label="Bookings"]) {
 	display: none;
 }
 
-#LeftRail div[role="navigation"] > div:has([aria-label="Groups"]) {
+#LeftRail div:has( > div[aria-label="Groups"]) {
 	display: none;
 }
 
-#LeftRail div[role="navigation"] > div:has([aria-label="Admin"]) {
+#LeftRail div:has( > div[aria-label="Admin"]) {
 	display: none;
 }
 
-#LeftRail div[role="navigation"] > div:has([aria-label="OneDrive"]) {
+#LeftRail div:has( > div[aria-label="OneDrive"]) {
 	display: none;
 }
 
-#LeftRail div[role="navigation"] > div:has([aria-label="To Do"]) {
+#LeftRail div:has( > div[aria-label="To Do"]) {
 	display: none;
 }
 
-#LeftRail div[role="navigation"] > div:has([aria-label="Org Explorer"]) {
+#LeftRail div:has( > div[aria-label="Org Explorer"]) {
 	display: none;
 }
 
-#LeftRail div[role="navigation"] > div:has([aria-label="Loop"]) {
+#LeftRail div:has( > div[aria-label="Loop"]) {
 	display: none;
 }
 
-#LeftRail div[role="navigation"] > div:has([aria-label="Copilot"]) {
+#LeftRail div:has( > div[aria-label="Copilot"]) {
 	display: none;
 }
 
-#LeftRail div[role="navigation"] + div > div:has([aria-label="More apps"]),
-#LeftRail div[role="navigation"] + div > div:has([aria-label=""]) {
+#LeftRail div:has( > div[aria-label="More apps"]) {
 	display: none;
 }
 
