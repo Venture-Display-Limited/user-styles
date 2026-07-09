@@ -148,7 +148,7 @@ main#viewport > div:has(ol.ms-Breadcrumb-list) {
 }
 
 /* Highlight recent 'Block/Reject Domain' rule */
-div[data-test-id^="6c9d1e14-9fb6-4aff-8e84-d8cc0a1456b3"] {
+div[data-test-id^="5da46fac-4679-4bf9-ac76-c2688a9cc877"] {
 	outline: 1px solid red;
 	position: relative;
 	z-index: 1;
