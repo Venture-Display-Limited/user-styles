@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Microsoft Security
 @namespace      Venture Banners
-@version        0.0.36
+@version        0.0.37
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -62,6 +62,11 @@ div:has(+ #pageContentZone):has(button#ResolutionToCommonIssuesButton) {
 	background-color: rgb(23 255 125 / 25%);
 }
 
+/* Highlight common email provider senders */
+.common-email-provider [data-automation-key="Sender"] span::after {
+	content: "💥";
+	font-size: 130%;
+}
 
 
 /* Put released emails at the end */
