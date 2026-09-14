@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [Venture] Microsoft Security
 @namespace      Venture Banners
-@version        0.0.37
+@version        0.0.38
 @description    Improve usability, clarity and style
 @author         Venture Banners
 ==/UserStyle== */
@@ -12,7 +12,7 @@
 @-moz-document url-prefix("https://security.microsoft.com/quarantine") {
 
 /* Hide left sidebar */
-.navZone[role="presentation"]:has( > nav[role="navigation"]){
+div[data-nav-panel-wrapper] {
 	display: none !important;
 }
 
